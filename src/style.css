@@ -1,0 +1,39 @@
+body, .body {
+    background-color: var(--uxp-host-background-color);
+    color: var(--uxp-host-text-color);
+    border-color: var(--uxp-host-border-color);
+    font-size: var(--uxp-host-font-size);
+}
+
+.bigText {
+    color: var(--uxp-host-text-color);
+    font-size: var(--uxp-host-font-size-larger);
+}
+
+.smallText {
+    color: var(--uxp-host-text-color);
+    font-size: var(--uxp-host-font-size-smaller);
+}
+
+#container {
+}
+
+.bottom-border {
+    border-bottom: 1px solid;
+    border-color: var(--uxp-host-border-color);
+}
+
+li.title {
+    padding: 4px 8px;
+    font-size: var(--uxp-host-font-size-larger);
+}
+
+li.content {
+    padding: 4px 20px;
+    border-bottom: 1px solid;
+    border-color: var(--uxp-host-border-color);
+}
+
+.pointer {
+    cursor: pointer;
+}

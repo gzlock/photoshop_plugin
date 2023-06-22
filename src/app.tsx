@@ -13,7 +13,7 @@ const {TrimType, PNGMethod, SaveOptions} = require('photoshop').constants;
 
 const ui = languages[require('uxp').
     host.
-    uiLocale.toLocaleLowerCase().includes('zha') ? 'zh' : 'en'];
+    uiLocale.toLocaleLowerCase().includes('zh') ? 'zh' : 'en'];
 
 interface ImageBundleLayerData {
   name: string;

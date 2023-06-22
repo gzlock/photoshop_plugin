@@ -1,7 +1,7 @@
 {
   "manifestVersion": 4,
   "id": "a1b2c3d4",
-  "name": "导出制作ilp所需的文件",
+  "name": ".ilp Plugin",
   "version": "1.0.0",
   "main": "index.html",
   "host": {
@@ -12,7 +12,8 @@
     {
       "id": "export_ilp_config_json",
       "label": {
-        "default": "导出"
+        "default": "Export",
+        "zh": "导出"
       },
       "type": "panel",
       "minimumSize": {

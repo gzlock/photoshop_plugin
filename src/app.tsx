@@ -389,6 +389,7 @@ class App extends React.Component<IAppProps, IAppState> {
                           value={this.state.exportFolder?.nativePath ??
                               ui.panel_plz_select_folder}
                           ref={this.$savePathInput}
+                          style={{width: 180}}
                           readOnly={true}/>
                       <button
                           onClick={this.selectFolder}>

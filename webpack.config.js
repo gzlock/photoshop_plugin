@@ -2,8 +2,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const zxpSignCmd = require('zxp-sign-cmd');
 
-const panelName = `export_ilp_config_json`;
+const panelName = `ilp_config_exporter`;
 
 const dist = path.join(__dirname, 'dist');
 

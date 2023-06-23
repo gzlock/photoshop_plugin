@@ -1,4 +1,4 @@
-# Photoshop plugin for pre-package .ilp file
+# .ilp Config Exporter
 
 Build Adobe UXP plugin with Webpack + React + Typescript
 
@@ -13,10 +13,6 @@ yarn watch
 # or
 yarn build
 ```
-
-## Todo
-
-* Build to Photoshop standard plugin file
 
 ## License
 

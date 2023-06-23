@@ -1,6 +1,6 @@
 {
   "manifestVersion": 4,
-  "id": "a1b2c3d4",
+  "id": "6566704a",
   "name": ".ilp Plugin",
   "version": "1.0.0",
   "main": "index.html",
@@ -10,10 +10,10 @@
   },
   "entrypoints": [
     {
-      "id": "export_ilp_config_json",
+      "id": "ilp_config_exporter",
       "label": {
-        "default": "Export",
-        "zh": "导出"
+        "default": "Export .ilp config",
+        "zh": "导出.ilp配置"
       },
       "type": "panel",
       "minimumSize": {
@@ -25,17 +25,32 @@
         "height": 1000
       },
       "preferredDockedSize": {
-        "width": 320,
-        "height": 570
+        "width": 320
       },
       "preferredFloatingSize": {
-        "width": 320,
-        "height": 570
+        "width": 320
       },
       "icons": [
         {
-          "path": "icons/panel_icon_dark.png",
           "width": 23,
+          "height": 23,
+          "path": "icons/dark.png",
+          "scale": [
+            1,
+            2
+          ],
+          "theme": [
+            "lightest",
+            "light"
+          ],
+          "species": [
+            "chrome"
+          ]
+        },
+        {
+          "width": 23,
+          "height": 23,
+          "path": "icons/light.png",
           "scale": [
             1,
             2
@@ -45,55 +60,36 @@
             "dark",
             "medium"
           ],
-          "height": 23
-        },
-        {
-          "path": "icons/panel_icon_light.png",
-          "width": 23,
-          "scale": [
-            1,
-            2
-          ],
-          "theme": [
-            "lightest",
-            "light"
-          ],
-          "height": 23
+          "species": [
+            "chrome"
+          ]
         }
       ]
     }
   ],
   "icons": [
     {
-      "path": "icons/panel_icon_dark.png",
-      "width": 23,
+      "width": 48,
+      "height": 48,
+      "path": "icons/plugin.png",
       "scale": [
         1,
         2
       ],
       "theme": [
-        "darkest",
         "dark",
-        "medium"
-      ],
-      "height": 23
-    },
-    {
-      "path": "icons/panel_icon_light.png",
-      "width": 23,
-      "scale": [
-        1,
-        2
-      ],
-      "theme": [
+        "darkest",
+        "medium",
         "lightest",
-        "light"
+        "light",
+        "all"
       ],
-      "height": 23
+      "species": [
+        "pluginList"
+      ]
     }
   ],
   "requiredPermissions": {
-    "clipboard": "readAndWrite",
     "network": {
       "domains": "all"
     },

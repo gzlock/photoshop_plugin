@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-export default {
+export const version = '1.0.0';
+export const languages = {
   'en': {
     'has': 'Has',
     'no': 'No',
@@ -54,7 +55,6 @@ export default {
             Note: Hidden empty layers will be counted separately.
           </li>
         </ul>,
-    'panel_no_document': 'No document',
     'panel_doc_state': 'Document state',
     'panel_doc_name': 'Document name',
     'panel_doc_cover': 'Cover layer(?)',
@@ -65,6 +65,13 @@ export default {
     'panel_plz_select_folder': 'Please select a folder',
     'panel_btn_select_folder': 'View',
     'panel_btn_export': 'Export ',
+    'panel_no_document': () => <div className="flex-container">
+      <div className="row">
+        <h2>Please open any psd file</h2>
+
+        <div>Version: v{version}</div>
+      </div>
+    </div>,
   },
   'zh': {
     'has': '有',
@@ -110,7 +117,6 @@ export default {
             注：隐藏的空图层会被分开统计
           </li>
         </ul>,
-    'panel_no_document': '请打开文档',
     'panel_doc_state': '文档信息',
     'panel_doc_name': '文档名称',
     'panel_doc_cover': '封面图层(?)',
@@ -121,5 +127,11 @@ export default {
     'panel_plz_select_folder': '请选择文件夹',
     'panel_btn_select_folder': '浏览',
     'panel_btn_export': '导出',
+    'panel_no_document': () => <div className="flex-container">
+      <div className="row">
+        <h2>请打开任意PSD文档</h2>
+        <div>当前版本: v{version}</div>
+      </div>
+    </div>,
   },
 };

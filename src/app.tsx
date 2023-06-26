@@ -6,7 +6,7 @@ import {Layer} from 'photoshop/dom/Layer';
 import {storage} from 'uxp';
 import {documentState, hideAllLayers, reset} from './document';
 import {flatLayers, layerIsVisible, makeInvisible, makeVisible} from './layer';
-import languages from './languages';
+import {languages} from './languages';
 
 const formats = require('uxp').storage.formats;
 const {TrimType, PNGMethod, SaveOptions} = require('photoshop').constants;
@@ -80,7 +80,6 @@ class App extends React.Component<IAppProps, IAppState> {
     this.export = this.export.bind(this);
 
     Ps.action.addNotificationListener([
-      'all',
       'hostFocusChanged',
       'open',
       'close',
@@ -343,8 +342,8 @@ class App extends React.Component<IAppProps, IAppState> {
 
   render() {
     return (
-        <div id="container">
-          {!this.state.doc ? (<h2>{ui.panel_no_document}</h2>)
+        <div>
+          {!this.state.doc ? ui.panel_no_document()
               : (
                   <ul>
                     <li className="title">{ui.panel_doc_state}</li>
@@ -407,7 +406,7 @@ class App extends React.Component<IAppProps, IAppState> {
           }
         </div>
     );
-  };
+  }
 }
 
 export default App;

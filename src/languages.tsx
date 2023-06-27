@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const version = '1.0.1';
+export const version = '1.0.2';
 export const languages = {
   'en': {
     'has': 'Has',

@@ -194,6 +194,7 @@ class App extends React.Component<IAppProps, IAppState> {
           if (!isCover && !isVisible) return;
           const file = await makeFile();
           makeVisible(target);
+          const {left, top} = target.bounds;
           await doc.trim(TrimType.TRANSPARENT);
 
           if (isCover) {
@@ -227,7 +228,6 @@ class App extends React.Component<IAppProps, IAppState> {
             if (target.isBackgroundLayer) {
               data.background = file.nativePath;
             } else {
-              const {left, top} = target.bounds;
               const layerData: ImageBundleLayerData = {
                 name: target.name,
                 x: left,

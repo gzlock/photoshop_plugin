@@ -107,3 +107,4 @@ dist
 .tern-port
 
 yarn.lock
+package-lock.json

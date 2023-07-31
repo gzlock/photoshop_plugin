@@ -1,0 +1,55 @@
+html, body {
+    height: 100vh;
+}
+
+body, .body {
+    margin: 0;
+    background-color: var(--uxp-host-background-color);
+    color: var(--uxp-host-text-color);
+    border-color: var(--uxp-host-border-color);
+    font-size: var(--uxp-host-font-size);
+}
+
+.bigText {
+    color: var(--uxp-host-text-color);
+    font-size: var(--uxp-host-font-size-larger);
+}
+
+.smallText {
+    color: var(--uxp-host-text-color);
+    font-size: var(--uxp-host-font-size-smaller);
+}
+
+.flex-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: block;
+    width: auto;
+    text-align: center;
+}
+
+.bottom-border {
+    border-bottom: 1px solid;
+    border-color: var(--uxp-host-border-color);
+}
+
+li.title {
+    padding: 4px 8px;
+    font-size: var(--uxp-host-font-size-larger);
+}
+
+li.content {
+    padding: 4px 20px;
+    border-bottom: 1px solid;
+    border-color: var(--uxp-host-border-color);
+}
+
+.pointer {
+    cursor: pointer;
+}
+

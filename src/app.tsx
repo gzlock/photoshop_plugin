@@ -352,7 +352,12 @@ class App extends React.Component<IAppProps, IAppState> {
                     }}
                         className="content"
                     >
-                      <ul style={{marginRight: 16}}>
+                      <ul style={{
+                        marginRight: 16,
+                        flexGrow: 0,
+                        flexShrink:0,
+                        flexBasis:150,
+                      }}>
                         <li>{ui.panel_doc_name}</li>
                         <li className="pointer" onClick={this.whatIsCover}>
                           {ui.panel_doc_cover}
@@ -375,7 +380,13 @@ class App extends React.Component<IAppProps, IAppState> {
                         </li>
                       </ul>
                       <ul>
-                        <li>{this.state.doc.name}</li>
+                        <li style={{
+                          maxWidth: 200,
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                          overflow: 'clip',
+                        }}
+                            title={this.state.doc.name}>{this.state.doc.name}</li>
                         <li>{this.state.state.cover > 0 ? ui.has : ui.no}</li>
                         <li>{this.state.state.background ? ui.has : ui.no}</li>
                         <li>{this.state.state.valid}</li>

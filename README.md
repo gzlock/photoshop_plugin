@@ -1,10 +1,5 @@
 # .ilp Config Exporter
 
-Build Adobe UXP plugin with Webpack + React + Typescript.
-
-[webpack-uxp-starter](https://github.com/emptykid/webpack-uxp-starter)
-
-
 ## Usage
 
 Check out this project and run
@@ -45,3 +40,8 @@ PS 'special' version:
    ![从增效工具里打开本插件](https://raw.githubusercontent.com/gzlock/images/master/ilp/plugin.png)
 
 ## [License](LICENSE)
+
+
+Build Adobe UXP plugin with Webpack + React + Typescript.
+
+[webpack-uxp-starter](https://github.com/emptykid/webpack-uxp-starter)

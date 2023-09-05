@@ -2,7 +2,7 @@
   "manifestVersion": 4,
   "id": "6566704a",
   "name": ".ilp Plugin",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.html",
   "host": {
     "app": "PS",

@@ -194,6 +194,26 @@ class App extends React.Component<IAppProps, IAppState> {
           if (!isCover && !isVisible) return;
           const file = await makeFile();
           makeVisible(target);
+
+          // 强制将图层的矢量蒙版转为蒙版，再应用蒙版
+          await action.batchPlay([
+                {
+                  _obj: 'select',
+                  _target: {_ref: 'layer', _id: target.id},
+                },
+                {
+                  '_obj': 'rasterizeLayer',
+                  '_target': [{'_enum': 'ordinal', '_ref': 'layer'}],
+                  'what': {'_enum': 'rasterizeItem', '_value': 'vectorMask'},
+                },
+                {
+                  '_obj': 'delete',
+                  '_target': [{'_enum': 'ordinal', '_ref': 'channel'}],
+                  'apply': true,
+                },
+              ], {},
+          );
+
           const {left, top} = target.bounds;
           await doc.trim(TrimType.TRANSPARENT);
 
@@ -355,8 +375,8 @@ class App extends React.Component<IAppProps, IAppState> {
                       <ul style={{
                         marginRight: 16,
                         flexGrow: 0,
-                        flexShrink:0,
-                        flexBasis:150,
+                        flexShrink: 0,
+                        flexBasis: 150,
                       }}>
                         <li>{ui.panel_doc_name}</li>
                         <li className="pointer" onClick={this.whatIsCover}>

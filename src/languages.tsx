@@ -1,6 +1,6 @@
 import * as React from 'react';
+const uxp = require('uxp');
 
-export const version = '1.0.5';
 export const languages = {
   'en': {
     'has': 'Has',
@@ -68,7 +68,7 @@ export const languages = {
     'panel_no_document': () => <div className="flex-container">
       <div className="row">
         <h2>Please open any psd file</h2>
-        <div>Version: v{version}</div>
+        <div>Version: v{uxp.versions['plugin']}</div>
         <div><a
             href="https://github.com/whimsy-ai/ilp_photoshop_plugin">Github</a>
         </div>
@@ -132,7 +132,7 @@ export const languages = {
     'panel_no_document': () => <div className="flex-container">
       <div className="row">
         <h2>请打开任意PSD文档</h2>
-        <div>当前版本: v{version}</div>
+        <div>当前版本: v{uxp.versions['plugin']}</div>
         <div><a
             href="https://github.com/whimsy-ai/ilp_photoshop_plugin">Github</a>
         </div>
